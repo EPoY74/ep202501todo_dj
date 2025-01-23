@@ -1,5 +1,5 @@
 ##### EPoY ######
-/project/settings_sec.py
+project/project/settings_sec.py
 
 
 
@@ -212,3 +212,4 @@ fabric.properties
 # Used for testing:
 ex.py
 setup.py
+
