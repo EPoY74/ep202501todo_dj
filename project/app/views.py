@@ -1,8 +1,14 @@
 from django.shortcuts import render
-from django.contrib.auth.models import User
+from django.contrib.auth.models import (
+    User,
+    Group,
+    )
 from rest_framework import viewsets
 
-from app.serializers import UserSerializer
+from app.serializers import (
+    UserSerializer,
+    GroupSerializer
+    )
 
 # Create your views here.
 
