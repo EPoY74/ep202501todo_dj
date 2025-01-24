@@ -8,7 +8,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Добавляется ручками, rest api
     'rest_framework',  # Добавляется ручками
+
+    # мое todo приложение
+    'app',
 
 
 ]
