@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-import copy
+from django.conf.locale.ru import(
+     formats as ru_formats
+     )
 
 from .settings_sec import *
 from .settings_sec import (
@@ -151,11 +153,24 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Yekaterinburg'
+
+ru_formats.DATETIME_FORMAT = "d.M.Y H:i:s"
+# ru_formats.date
+
+# ru_formats.DATE_FORMAT = 'd.m.Y'
+# ru_formats.TIME_FORMAT = 'H:i'
+# ru_formats.DATETIME_FORMAT = 'd.m.Y, H:i'
+
+# ru_formats.DATETIME_INPUT_FORMATS = [
+#     '%d.%m.%Y, %H:%M:%S',
+#     '%d.%m.%Y, %H:%M',
+# ]
+
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
