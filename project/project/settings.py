@@ -15,6 +15,14 @@ import os
 import copy
 
 from .settings_sec import *
+from .settings_sec import (
+    DB_ENGINE_PG,
+    DB_NAME_PG,
+    DB_USER_PG,
+    DB_PASSWORD_PG,
+    DB_HOST_PG,
+    DB_PORT_PG
+)
 # from .settings_sec import DATABASES_SEC
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -92,9 +100,18 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'sqlite': {
         'ENGINE': DB_ENGINE,
         'NAME': DB_NAME,
+    },
+
+    'default': {
+        'ENGINE': DB_ENGINE_PG,
+        'NAME': DB_NAME_PG,
+        'USER': DB_USER_PG,
+        'PASSWORD': DB_PASSWORD_PG,
+        'HOST': DB_HOST_PG,
+        'PORT': DB_PORT_PG ,
     }
 }
 
