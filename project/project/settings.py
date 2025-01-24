@@ -23,6 +23,7 @@ from .settings_sec import (
     DB_HOST_PG,
     DB_PORT_PG
 )
+from .settings_rest_framework import REST_FRAMEWORK as REST_FRAMEWORK_SETTINGS
 # from .settings_sec import DATABASES_SEC
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -67,13 +68,14 @@ MIDDLEWARE = [
 ]
 
 # добавляется ручками
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
+REST_FRAMEWORK = REST_FRAMEWORK_SETTINGS
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
 
 ROOT_URLCONF = 'project.urls'
 
