@@ -9,21 +9,24 @@ from rest_framework import (
     viewsets
 )
 
-# Serializers define the API representations
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model=User
-        fields = ['url', 'username', 'email', 'is_staff']
+from app.serializers import UserSerializer
 
 
-# ViewSets define the user behavoir
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# # Serializers define the API representations
+# class UserSerializer(serializers.HyperlinkedModelSerializer):
+#     class Meta:
+#         model=User
+#         fields = ['url', 'username', 'email', 'is_staff']
 
-# Routers provide an easy way  of automatically determining the URL conf
-router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
+
+# # ViewSets define the user behavoir
+# class UserViewSet(viewsets.ModelViewSet):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+
+# # Routers provide an easy way  of automatically determining the URL conf
+# router = routers.DefaultRouter()
+# router.register(r'users', UserViewSet)
 
 # # Wire up our API using automatic URL routing
 # # Additionally, we include login URLs for the brousable API
