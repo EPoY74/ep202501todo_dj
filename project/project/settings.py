@@ -23,7 +23,15 @@ from .settings_sec import (
     DB_HOST_PG,
     DB_PORT_PG
 )
-from .settings_rest_framework import REST_FRAMEWORK as REST_FRAMEWORK_SETTINGS
+
+from .settings_rest_framework import (
+     REST_FRAMEWORK as REST_FRAMEWORK_SETTINGS
+)
+
+from .settings_intalled_apps import (
+    INSTALLED_APPS as INSTALLED_APPS_SETTINGS
+)
+
 # from .settings_sec import DATABASES_SEC
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -44,18 +52,20 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+INSTALLED_APPS = INSTALLED_APPS_SETTINGS
 
-    'rest_framework',  # Добавляется ручками
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+
+#     'rest_framework',  # Добавляется ручками
 
 
-]
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
