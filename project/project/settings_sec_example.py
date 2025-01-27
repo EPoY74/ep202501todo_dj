@@ -7,7 +7,6 @@ SECRET_KEY = 'Это твой секретный ключ'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-# docker run --name todo-postgres -p 5432:5432 -e POSTGRES_PASSWORD=PassWord -d postgres
 
 
 DB_ENGINE =  'django.db.backends.sqlite3'
