@@ -56,18 +56,6 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = INSTALLED_APPS_SETTINGS
 
-# INSTALLED_APPS = [
-#     'django.contrib.admin',
-#     'django.contrib.auth',
-#     'django.contrib.contenttypes',
-#     'django.contrib.sessions',
-#     'django.contrib.messages',
-#     'django.contrib.staticfiles',
-
-#     'rest_framework',  # Добавляется ручками
-
-
-# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,13 +69,7 @@ MIDDLEWARE = [
 
 # добавляется ручками
 REST_FRAMEWORK = REST_FRAMEWORK_SETTINGS
-# REST_FRAMEWORK = {
-#     # Use Django's standard `django.contrib.auth` permissions,
-#     # or allow read-only access for unauthenticated users.
-#     'DEFAULT_PERMISSION_CLASSES': [
-#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-#     ]
-# }
+
 
 ROOT_URLCONF = 'project.urls'
 
