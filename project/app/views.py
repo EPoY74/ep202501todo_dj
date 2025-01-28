@@ -10,7 +10,8 @@ from rest_framework import (
 
 from app.serializers import (
     UserSerializer,
-    GroupSerializer
+    GroupSerializer,
+    TaskSerializer
     )
 
 # Create your views here.
@@ -31,4 +32,9 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all().order_by('name')
     serializer_class = GroupSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Group.objects.all()
+    serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
