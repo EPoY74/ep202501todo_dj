@@ -4,7 +4,10 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework.authentication.TokenAuthentication'
+        # 'rest_framework.authentication.TokenAuthentication',
+        
+        # Удалить, когда не нужен будет!!!!!
+        'rest_framework.authentication.BasicAuthentication',
     ],
     
     # Разрешаю неавторизированным пользователям только чтение 
