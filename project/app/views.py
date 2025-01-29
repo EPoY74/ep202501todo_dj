@@ -14,6 +14,8 @@ from app.serializers import (
     TaskSerializer
     )
 
+from app.models import Task
+
 # Create your views here.
 
 
@@ -35,6 +37,6 @@ class GroupViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
 class TaskViewSet(viewsets.ModelViewSet):
-    queryset = Group.objects.all()
+    queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = [permissions.IsAuthenticated]
