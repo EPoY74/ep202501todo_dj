@@ -10,6 +10,8 @@ INSTALLED_APPS = [
 
     # Добавляется ручками, rest api
     'rest_framework',  # Добавляется ручками
+    # добавляю token authentication
+    'rest_framework.authtoken',
 
     # мое todo приложение
     'app',
