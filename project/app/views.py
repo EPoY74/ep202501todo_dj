@@ -11,7 +11,7 @@ from rest_framework import (
 from app.serializers import (
     UserSerializer,
     GroupSerializer,
-    TaskSerializer
+    TasksSerializer
     )
 
 from app.models import Task
@@ -36,7 +36,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     serializer_class = GroupSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-class TaskViewSet(viewsets.ModelViewSet):
+class TasksViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
-    serializer_class = TaskSerializer
+    serializer_class = TasksSerializer
     permission_classes = [permissions.IsAuthenticated]

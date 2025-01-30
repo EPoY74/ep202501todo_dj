@@ -9,4 +9,4 @@ from .views import (
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'group', GroupViewSet)
-router.register(r'task',TaskViewSet)
+router.register(r'tasks',TaskViewSet)

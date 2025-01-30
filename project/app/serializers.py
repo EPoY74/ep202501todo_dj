@@ -19,7 +19,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['url', 'name']
 
 
-class TaskSerializer(serializers.HyperlinkedModelSerializer):
+class TasksSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=Task
         fields=['autor', 'create_at', 'shot_task_deskriptions', 
