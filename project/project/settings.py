@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import timedelta
+
 from django.conf.locale.ru import(
      formats as ru_formats
      )
@@ -69,6 +71,21 @@ MIDDLEWARE = [
 
 # добавляется ручками
 REST_FRAMEWORK = REST_FRAMEWORK_SETTINGS
+
+# настройки simpleJWT
+SIMPLE_JWT={
+    # Время жизни access_tpken
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    
+    # Время жизни refresh_token
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    
+    # обновлять refresh_token при каждом запросе
+    'ROTATE_REFRESH_TOKENS': False,
+    
+    # Добавлять старые reffresh_tokens в черный список
+    'BLACKLIST_AFTER_ROTATION': True
+}
 
 
 ROOT_URLCONF = 'project.urls'
