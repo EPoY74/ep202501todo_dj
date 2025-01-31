@@ -73,7 +73,7 @@ MIDDLEWARE = [
 REST_FRAMEWORK = REST_FRAMEWORK_SETTINGS
 
 # настройки simpleJWT
-SIMPLE_JWT={
+SIMPLE_JWT={  #
     # Время жизни access_tpken
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     
