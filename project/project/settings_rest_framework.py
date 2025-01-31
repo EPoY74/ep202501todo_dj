@@ -5,8 +5,16 @@ REST_FRAMEWORK = {
     
     # определяю, какие классы аутентификации будут использоваться
     'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework.authentication.TokenAuthentication', # Аутентификация по токену
-        'rest_framework.authentication.SessionAuthentication', # Аутертификация по сессии       
+        
+        # Аутентификация по токену
+        'rest_framework.authentication.TokenAuthentication',
+        
+        # Аутертификация по сессии
+        'rest_framework.authentication.SessionAuthentication',
+        
+        # Аутентификация jwt
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+            
         # Удалить, когда не нужен будет!!!!!
         # 'rest_framework.authentication.BasicAuthentication',
     ],
